@@ -15,10 +15,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "me.imbanana.modtemplate.fabric.ModtemplateFabric"
-        ],
-        "client": [
-            "me.imbanana.modtemplate.fabric.client.ModtemplateFabricClient"
+            "me.imbanana.itemframeanywhere.fabric.ItemFrameAnywhereFabric"
         ]
     },
     "mixins": [

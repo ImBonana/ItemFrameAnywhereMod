@@ -1,9 +1,9 @@
-package me.imbanana.modtemplate.fabric;
+package me.imbanana.itemframeanywhere.fabric;
 
-import me.imbanana.modtemplate.Modtemplate;
+import me.imbanana.itemframeanywhere.ItemFrameAnywhere;
 import net.fabricmc.api.ModInitializer;
 
-public final class ModtemplateFabric implements ModInitializer {
+public final class ItemFrameAnywhereFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         // This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -11,6 +11,6 @@ public final class ModtemplateFabric implements ModInitializer {
         // Proceed with mild caution.
 
         // Run our common setup.
-        Modtemplate.init();
+        ItemFrameAnywhere.init();
     }
 }
