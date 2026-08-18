@@ -16,6 +16,9 @@
     "entrypoints": {
         "main": [
             "me.imbanana.itemframeanywhere.fabric.ItemFrameAnywhereFabric"
+        ],
+        "client": [
+            "me.imbanana.itemframeanywhere.fabric.ItemFrameAnywhereClientFabric"
         ]
     },
     "mixins": [

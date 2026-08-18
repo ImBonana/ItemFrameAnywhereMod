@@ -60,7 +60,10 @@ public abstract class ItemFrameMixin extends HangingEntity {
 
     @Inject(
             method = "survives",
-            at = @At("TAIL"),
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/world/entity/decoration/ItemFrame;level()Lnet/minecraft/world/level/Level;"
+            ),
             cancellable = true
     )
     private void fixSupportCheck(CallbackInfoReturnable<Boolean> cir) {

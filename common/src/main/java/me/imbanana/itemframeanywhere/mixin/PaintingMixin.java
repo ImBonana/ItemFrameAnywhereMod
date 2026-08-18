@@ -42,7 +42,6 @@ public abstract class PaintingMixin extends HangingEntity {
             at = @At("RETURN")
     )
     private Packet<ClientGamePacketListener> fixLoadPacket(Packet<ClientGamePacketListener> original, @Local(argsOnly = true) ServerEntity entity) {
-        ItemFrameAnywhere.LOGGER.info(String.valueOf(entity.getPositionBase()));
         return new ClientboundAddEntityPacket(
                 this.getId(),
                 this.getUUID(),

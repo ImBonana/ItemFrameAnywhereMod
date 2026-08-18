@@ -1,10 +1,7 @@
 package me.imbanana.itemframeanywhere.mixin;
 
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import me.imbanana.itemframeanywhere.ItemFrameAnywhere;
 import me.imbanana.itemframeanywhere.util.MixinVarPass;
-import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.decoration.HangingEntity;
 import net.minecraft.world.item.HangingEntityItem;
