@@ -12,10 +12,13 @@
     ],
     "mixins": [
         "BlockAttachedEntityMixin",
+        "HangingEntityAccessor",
         "HangingEntityItemMixin",
         "HangingEntityMixin",
         "ItemFrameMixin",
-        "PaintingMixin"
+        "PaintingAccessor",
+        "PaintingMixin",
+        "PlayerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

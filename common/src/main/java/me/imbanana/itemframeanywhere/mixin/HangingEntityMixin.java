@@ -3,13 +3,12 @@ package me.imbanana.itemframeanywhere.mixin;
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import me.imbanana.itemframeanywhere.ItemFrameAnywhere;
+import me.imbanana.itemframeanywhere.util.Helper;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.decoration.BlockAttachedEntity;
 import net.minecraft.world.entity.decoration.HangingEntity;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.AABB;
 import org.joml.Vector3f;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -52,6 +51,6 @@ public abstract class HangingEntityMixin extends BlockAttachedEntity {
             )
     )
     private Vector3f fixSupportBox(Vector3f instance, float scalar, Operation<Vector3f> original) {
-        return original.call(instance, (float) - ItemFrameAnywhere.getEntityBlockOffset() * 2 - 0.001f);
+        return original.call(instance, (float) - Helper.getEntityBlockOffset() * 2 - 0.001f);
     }
 }

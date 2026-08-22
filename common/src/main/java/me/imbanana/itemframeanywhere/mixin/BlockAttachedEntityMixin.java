@@ -3,7 +3,7 @@ package me.imbanana.itemframeanywhere.mixin;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import me.imbanana.itemframeanywhere.ItemFrameAnywhere;
+import me.imbanana.itemframeanywhere.util.Helper;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.decoration.BlockAttachedEntity;
@@ -23,7 +23,7 @@ public abstract class BlockAttachedEntityMixin extends Entity {
             method = "setPos"
     )
     private void injectSetPos(double x, double y, double z, Operation<Void> original) {
-        Vec3 newPos = ItemFrameAnywhere.alignWithPixel(x, y, z, this.getDirection());
+        Vec3 newPos = Helper.alignWithPixel(x, y, z, this.getDirection());
         this.setPosRaw(newPos.x(), newPos.y(), newPos.z());
         original.call(newPos.x(), newPos.y(), newPos.z());
     }

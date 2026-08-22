@@ -1,6 +1,6 @@
 package me.imbanana.itemframeanywhere.mixin;
 
-import me.imbanana.itemframeanywhere.ItemFrameAnywhere;
+import me.imbanana.itemframeanywhere.util.Helper;
 import net.minecraft.client.renderer.entity.ItemFrameRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
@@ -13,6 +13,6 @@ public abstract class ItemFrameRendererMixin {
             constant = @Constant(doubleValue = 0.46875)
     )
     private double modifyOffset(double constant) {
-        return constant + ItemFrameAnywhere.getEntityBlockOffset();
+        return constant + Helper.getEntityBlockOffset();
     }
 }

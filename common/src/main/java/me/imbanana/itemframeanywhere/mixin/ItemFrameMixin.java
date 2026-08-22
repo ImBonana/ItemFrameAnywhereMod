@@ -3,7 +3,7 @@ package me.imbanana.itemframeanywhere.mixin;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import me.imbanana.itemframeanywhere.ItemFrameAnywhere;
+import me.imbanana.itemframeanywhere.util.Helper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.protocol.Packet;
@@ -35,7 +35,7 @@ public abstract class ItemFrameMixin extends HangingEntity {
                     target = "Lnet/minecraft/world/phys/Vec3;relative(Lnet/minecraft/core/Direction;D)Lnet/minecraft/world/phys/Vec3;")
     )
     private Vec3 fixBoundingBoxPos(Vec3 original, @Local(argsOnly = true) Direction direction) {
-        return this.position().relative(direction, ItemFrameAnywhere.getEntityBlockOffset()); // copy the entity pos
+        return this.position().relative(direction, Helper.getEntityBlockOffset()); // copy the entity pos
     }
 
     @ModifyReturnValue(

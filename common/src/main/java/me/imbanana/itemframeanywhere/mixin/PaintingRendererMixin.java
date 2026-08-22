@@ -1,7 +1,7 @@
 package me.imbanana.itemframeanywhere.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import me.imbanana.itemframeanywhere.ItemFrameAnywhere;
+import me.imbanana.itemframeanywhere.util.Helper;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.PaintingRenderer;
 import net.minecraft.client.renderer.entity.state.PaintingRenderState;
@@ -21,7 +21,7 @@ public abstract class PaintingRendererMixin {
             )
     )
     private void fixPaintingRenderOffset(PaintingRenderState state, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState camera, CallbackInfo ci) {
-        double offset = ItemFrameAnywhere.getEntityBlockOffset();
+        double offset = Helper.getEntityBlockOffset();
         poseStack.translate(0, 0, -offset);
     }
 }
