@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 public class ModKeyMapping {
     private static final KeyMapping gridSnapKey = new KeyMapping(
             "key." + ItemFrameAnywhere.MOD_ID + ".grid_snap",
-            InputConstants.Type.KEYSYM,
+            InputConstants.Type.KEYBOARD,
             InputConstants.KEY_LALT,
             KeyMapping.Category.GAMEPLAY
     );
